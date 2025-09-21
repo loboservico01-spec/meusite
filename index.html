@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Visionix — Entretenimento sem limites</title>
+  <meta name="description" content="Visionix IPTV — canais ao vivo, filmes, séries e esportes. Assine via Pix e fale conosco pelo WhatsApp." />
+  <meta name="theme-color" content="#7c3aed" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Pequena transição para acordeão */
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.32s ease; }
+    .accordion-open { max-height: 1000px; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+  <!-- Skip link -->
+  <a class="sr-only focus:not-sr-only p-2 bg-indigo-600 text-white absolute left-4 top-4 rounded" href="#main">Ir para o conteúdo</a>
+
+ <!-- Header / Navbar -->
+<header class="backdrop-blur bg-gradient-to-r from-indigo-600/80 via-purple-600/80 to-pink-600/80 text-white sticky top-0 z-50 shadow-lg border-b border-white/20">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <div class="rounded-xl bg-white/20 px-3 py-2 shadow-md">
+        <span class="font-extrabold text-xl md:text-2xl tracking-wide">Visionix</span>
+      </div>
+      <div class="hidden md:block text-sm opacity-80 italic">Filmes • Séries • Canais • Esportes</div>
+    </div>
+
+    <!-- Navegação -->
+<nav aria-label="Navegação principal" class="hidden md:flex gap-6 text-sm font-semibold">
+  <a class="relative group" href="#planos">
+    Planos
+    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+  </a>
+  <a class="relative group" href="#servicos">
+    Serviços
+    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+  </a>
+  <a class="relative group" href="#contato">
+    Contato
+    <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-white transition-all group-hover:w-full"></span>
+  </a>
+</nav>
+
+    <!-- Botões -->
+<div class="flex items-center gap-3">
+  <a id="cta-assinar" href="#planos" class="bg-white text-indigo-700 px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:scale-105 transition-transform">✨ Assinar</a>
+  <a id="btn-cliente" href="login.html" target="_blank" class="bg-green-500 px-4 py-2 rounded-full text-sm font-semibold shadow-md hover:scale-105 transition-transform">👤 Área do Cliente</a>
+</div>
+  </div>
+</header>
+
+  <!-- Main -->
+  <main id="main" class="max-w-7xl mx-auto px-6 py-12">
+
+    <!-- Hero -->
+    <section id="sobre" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-14">
+      <div>
+        <h1 class="text-3xl md:text-4xl font-extrabold leading-tight mb-4">Visionix — Entretenimento sem limites</h1>
+        <p class="text-gray-700 mb-6 max-w-xl">
+          Acesse serviços de IPTV, VPN, streaming, conteúdo adulto e muito mais, com alta qualidade e segurança. Planos flexíveis, suporte via WhatsApp e pagamento rápido via Pix. Compatível com Smart TV, TV Box, Android, iOS e PC.
+        </p>
+
+        <ul class="grid gap-3 text-gray-700 mb-6">
+          <li>✔ Serviços estáveis com suporte dedicado</li>
+          <li>✔ Planos variados — escolha o que combina com você</li>
+          <li>✔ Assistência passo a passo para configuração</li>
+        </ul>
+
+        <div class="flex gap-3">
+          <a href="#planos" class="bg-indigo-600 text-white px-5 py-3 rounded-md font-semibold shadow">Ver Planos</a>
+          <a href="#contato" class="border border-indigo-600 text-indigo-600 px-5 py-3 rounded-md font-semibold">Fale Conosco</a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow p-6">
+        <h3 class="text-lg font-bold mb-4">Plano em destaque</h3>
+        <div class="flex items-baseline gap-3">
+          <span class="text-3xl font-extrabold">R$ 40</span>
+          <span class="text-sm text-gray-500">/mês — 2 telas</span>
+        </div>
+        <p class="text-sm text-gray-600 mt-2 mb-4">Use duas telas simultâneas e só pague por uma</p>
+        <ul class="text-sm text-gray-700 space-y-1 mb-4">
+          <li>✔ Canais ao vivo, filmes e series</li>
+          <li>✔ VPN Internet Ilimitada</li>
+          <li>✔ Suporte VIP</li>
+        </ul>
+        <div class="flex gap-2">
+          <button onclick="openWhatsAppPrefilled('Quero assinar o plano 2 telas — R$ 60/mês')" class="bg-green-500 text-white px-3 py-2 rounded-md">📲 Assinar (WhatsApp)</button>
+          <a href="#pagamento" class="px-3 py-2 rounded-md border">Como pagar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços detalhados -->
+    <section id="servicos" class="mb-14">
+      <h2 class="text-2xl font-bold mb-6 text-center">Serviços Prestados</h2>
+
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">📡 IPTV</h4>
+          <p class="text-sm text-gray-700">Acesso a canais ao vivo, filmes, séries e esportes em HD/4K, direto na sua Smart TV, TV Box, celular ou PC.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">📶 Chip de Dados</h4>
+          <p class="text-sm text-gray-700">Planos de chip com internet móvel para usar em qualquer lugar, sem burocracia.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">🔐 VPN</h4>
+          <p class="text-sm text-gray-700">Navegue sem limites com nossa VPN exclusiva para celulares Android. Compatível com números TIM e Vivo.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">🔞 Conteúdo Adulto</h4>
+          <p class="text-sm text-gray-700">Aproveite conteúdo adulto +18 exclusivo com total sigilo, qualidade máxima e experiência única, acessando de forma segura o material mais quente da internet.</p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h4 class="font-semibold mb-2">🎬 Streaming de Música e Vídeo</h4>
+          <p class="text-sm text-gray-700">Acesse serviços selecionados para música, vídeos, filmes e séries, como YouTube Premium, Globoplay e muito mais.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recursos / Features -->
+    <section class="mb-14">
+      <h2 class="text-2xl font-bold mb-6 text-center">O que você ganha assinando</h2>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <div class="text-3xl mb-3">📺</div>
+          <h4 class="font-semibold mb-2">Multiplataforma</h4>
+          <p class="text-sm text-gray-600">Smart TV, Android TV, TV Box, iOS, PC e players M3U compatíveis.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <div class="text-3xl mb-3">⚡</div>
+          <h4 class="font-semibold mb-2">Conexão Rápida e Estável</h4>
+          <p class="text-sm text-gray-600">VPN ilimitada e streaming sem travamentos, com servidores dedicados.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <div class="text-3xl mb-3">🔒</div>
+          <h4 class="font-semibold mb-2">Privacidade e Segurança</h4>
+          <p class="text-sm text-gray-600">Navegação e conteúdo protegidos, com total sigilo e atualizações constantes.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <div class="text-3xl mb-3">💬</div>
+          <h4 class="font-semibold mb-2">Plano Fidelidade</h4>
+          <p class="text-sm text-gray-600">Seja recompensado por se manter fiel e ganhe ainda mais ao indicar amigos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planos detalhados -->
+    <section id="planos" class="mb-14">
+      <h2 class="text-2xl font-bold mb-6 text-center">Planos e Valores</h2>
+
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-4">
+        <!-- Card -->
+        <article class="bg-white p-6 rounded-2xl shadow border">
+          <h3 class="font-semibold text-lg mb-2">Plano Essencial</h3>
+          <p class="text-2xl font-extrabold mb-2">R$ 30 <span class="text-sm font-medium">/mês</span></p>
+          <p class="text-sm text-gray-600 mb-4">1 dispositivo simultâneo</p>
+          <ul class="text-sm text-gray-700 space-y-1 mb-4">
+            <li>✔ Canais ao vivo, filmes e series</li>
+            <li>✔ Conexão segura</li>
+            <li>✔ Suporte VIP</li>
+          </ul>
+          <button onclick="openWhatsAppPrefilled('Quero assinar o Plano Básico — 1 tela — R$35')" class="w-full bg-indigo-600 text-white py-2 rounded-md">Assinar via WhatsApp</button>
+        </article>
+
+        <article class="bg-white p-6 rounded-2xl shadow border transform scale-100">
+          <h3 class="font-semibold text-lg mb-2">Plano Popular</h3>
+          <p class="text-2xl font-extrabold mb-2">R$ 40 <span class="text-sm font-medium">/mês</span></p>
+          <p class="text-sm text-gray-600 mb-4">1 dispositivo simultâneo</p>
+          <ul class="text-sm text-gray-700 space-y-1 mb-4">
+            <li>✔ Canais ao vivo, filmes e series</li>
+            <li>✔ Escolha entre Youtube Premium, Internet Ilimitada - VPN ou Site +18 Totalmente Sigiloso </li>
+            <li>✔ Suporte VIP</li>
+          </ul>
+          <button onclick="openWhatsAppPrefilled('Quero assinar o Plano Popular — 2 telas — R$60')" class="w-full bg-indigo-600 text-white py-2 rounded-md">Assinar via WhatsApp</button>
+        </article>
+
+        <article class="bg-white p-6 rounded-2xl shadow border">
+          <h3 class="font-semibold text-lg mb-2">Plano Premium</h3>
+          <p class="text-2xl font-extrabold mb-2">R$ 50 <span class="text-sm font-medium">/mês</span></p>
+          <p class="text-sm text-gray-600 mb-4">1 dispositivo simultâneo</p>
+          <ul class="text-sm text-gray-700 space-y-1 mb-4">
+            <li>✔ Canais ao vivo, filmes e series</li>
+            <li>✔ Acesso ao site +18 Totalmente Sigiloso</li>
+            <li>✔ Escolha entre Youtube Premium ou Internet Ilimitada - VPN</li>
+            <li>✔ Suporte VIP</li>
+          </ul>
+          <button onclick="openWhatsAppPrefilled('Quero assinar o Plano Família — 3 telas — R$75')" class="w-full bg-indigo-600 text-white py-2 rounded-md">Assinar via WhatsApp</button>
+        </article>
+
+        <article class="bg-white p-6 rounded-2xl shadow border">
+          <h3 class="font-semibold text-lg mb-2">Plano Premium+</h3>
+          <p class="text-2xl font-extrabold mb-2">R$ 85 <span class="text-sm font-medium">/mês</span></p>
+          <p class="text-sm text-gray-600 mb-4">1 dispositivo simultâneo</p>
+          <ul class="text-sm text-gray-700 space-y-1 mb-4">
+            <li>✔ Canais ao vivo, filmes e series</li>
+            <li>✔ Escolha entre Youtube Premium, Internet Ilimitada - VPN ou Site +18 Totalmente Sigiloso</li>
+            <li>✔ Chip com 40 GB com Whats, Insta e mais ilimitados</li>
+          </ul>
+          <button onclick="openWhatsAppPrefilled('Quero assinar o Plano Premium — 4 telas — R$85')" class="w-full bg-indigo-600 text-white py-2 rounded-md">Assinar via WhatsApp</button>
+        </article>
+      </div>
+
+      <p class="text-xs text-gray-500 mt-4">*Preços sugeridos; atualize conforme sua política. Sem fidelidade — cancele quando quiser.</p>
+    </section>
+
+    
+
+
+  <!-- Observações Importantes -->
+<section class="mb-14 bg-white p-8 rounded-xl shadow-lg">
+  <h2 class="text-3xl font-bold mb-8 text-center text-indigo-600">Observações Importantes</h2>
+  <div class="grid gap-6 md:grid-cols-3">
+
+    <!-- 1. Tela Não Simultânea -->
+    <div class="bg-yellow-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-700 text-xl font-bold">🖥️</div>
+      <h4 class="text-xl font-semibold mb-2 text-center">Tela Não Simultânea</h4>
+      <p class="text-gray-700 text-center">Caso não seja simultânea, aplica-se <strong>taxa única de R$20</strong>.</p>
+    </div>
+
+    <!-- 2. Tela Simultânea -->
+    <div class="bg-green-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="w-16 h-16 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-4 text-green-700 text-xl font-bold">💻</div>
+      <h4 class="text-xl font-semibold mb-2 text-center">Tela Simultânea</h4>
+      <p class="text-gray-700 text-center">Cada nova tela simultânea custa <strong>R$20/mês</strong>.</p>
+    </div>
+
+    <!-- 3. Conteúdo Atualizado -->
+    <div class="bg-indigo-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-700 text-xl font-bold">🔄</div>
+      <h4 class="text-xl font-semibold mb-2 text-center">Conteúdo Atualizado</h4>
+      <p class="text-gray-700 text-center">Adicionamos conteúdo no mínimo 2x por semana e aceitamos solicitações de adição dos usuários.</p>
+    </div>
+
+    <!-- 4. Conteúdo Esportivo -->
+    <div class="bg-blue-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-700 text-xl font-bold">🏆</div>
+      <h4 class="text-xl font-semibold mb-2 text-center">Conteúdo Esportivo</h4>
+      <p class="text-gray-700 text-center">A cada dia, atualizamos o status com todo o conteúdo esportivo disponível.</p>
+    </div>
+
+    <!-- 5. Fidelidade -->
+    <div class="bg-purple-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-700 text-xl font-bold">🎁</div>
+      <h4 class="text-xl font-semibold mb-2 text-center">Fidelidade</h4>
+      <p class="text-gray-700 text-center">A cada 6 meses de assinatura, você ganha <strong>1 mês grátis</strong>*.</p>
+    </div>
+
+    <!-- 6. Indicações -->
+    <div class="bg-orange-50 p-6 rounded-lg shadow hover:shadow-lg transition">
+      <div class="w-16 h-16 bg-orange-200 rounded-full flex items-center justify-center mx-auto mb-4 text-orange-700 text-xl font-bold">🤝</div>
+      <h4 class="text-xl font-semibold mb-2 text-center">Indicações</h4>
+      <p class="text-gray-700 text-center">A cada 2 indicações, receba <strong>1 mês grátis</strong>. A cada 5 indicações, receba <strong>R$100 no Pix</strong>.</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Pagamento -->
+    <section id="pagamento" class="mb-14">
+      <h2 class="text-2xl font-bold mb-4 text-center">Pagamento</h2>
+
+      <div class="flex flex-col md:flex-row gap-6 items-start justify-center">
+        <!-- Pix box -->
+        <div class="bg-white p-6 rounded-lg shadow max-w-md w-full">
+          <h3 class="font-semibold mb-3">Pix (recomendado)</h3>
+          <p class="text-sm text-gray-700 mb-3">Use a chave Pix abaixo ou gere o QRCode direto no celular.</p>
+
+          <label class="block text-xs text-gray-500 mb-1">Chave Pix</label>
+          <div class="flex gap-3 items-center mb-3">
+            <input id="pixKey" type="text" readonly value="atendimentovisionix@gmail.com" class="w-full border px-3 py-2 rounded" aria-label="Chave Pix">
+            <button id="btn-copy-pix" onclick="copyPix()" class="bg-green-600 text-white px-3 py-2 rounded">Copiar</button>
+          </div>
+
+          <p class="text-xs text-gray-500 mb-3">Titular: <strong id="pix-owner">Paulo César Ramos Luz</strong></p>
+
+          <div class="flex gap-3">
+            <button onclick="showPixQR()" class="px-3 py-2 border rounded">Gerar QR</button>
+            <button onclick="openWhatsAppPrefilled('Enviei o pagamento via Pix — confirmar?')" class="px-3 py-2 bg-indigo-600 text-white rounded">Enviar comprovante</button>
+          </div>
+
+          <div id="pix-qr-wrap" class="mt-4 hidden">
+            <p class="text-xs text-gray-500 mb-2">QR gerado (use a câmera do celular):</p>
+            <img id="pix-qr" alt="QR Pix" class="w-40 h-40 object-contain bg-white p-2 rounded" />
+            <p class="text-xs text-gray-400 mt-2">Obs: QR é gerado via serviço público.</p>
+          </div>
+        </div>
+
+        <!-- Outros métodos -->
+        <div class="bg-white p-6 rounded-lg shadow max-w-md w-full">
+          <h3 class="font-semibold mb-3">Outros métodos</h3>
+          <ul class="text-sm text-gray-700 space-y-2 mb-3">
+            <li>• Boleto bancário (sob demanda)</li>
+            <li>• Cartão de crédito (parceria disponível)</li>
+            <li>• Transferência bancária — entre em contato para dados</li>
+          </ul>
+          <p class="text-xs text-gray-500">Para emitir boleto ou processar cartão, entre em contato via WhatsApp.</p>
+        </div>
+      </div>
+    </section>
+
+   <!-- Serviços (acordeão) -->
+<section id="servicos" class="mb-14">
+  <h2 class="text-2xl font-bold mb-6 text-center">Conheça cada serviço mais a fundo</h2>
+
+  <div class="space-y-3 max-w-4xl mx-auto">
+    
+    <!-- IPTV -->
+    <div class="bg-white rounded-lg shadow p-4">
+      <button class="w-full text-left faq-btn py-2" aria-expanded="false">
+        <div class="flex justify-between items-center">
+          <span class="font-semibold">1. IPTV</span>
+          <span class="text-gray-500">Canais ao vivo e on-demand</span>
+        </div>
+      </button>
+      <div class="accordion-content px-2 text-sm text-gray-700">
+        Tenha acesso a todos os canais ao vivo, incluindo abertos, fechados e internacionais, 
+        além de um acervo completo de séries, filmes e lançamentos em qualidade Full HD e 4K.
+        <ul class="list-disc pl-4 mt-2 space-y-1">
+          <li>✔️ <strong>Canais de Esporte:</strong> futebol, lutas, Fórmula 1, NBA e muito mais.</li>
+          <li>✔️ <strong>Canais de Filmes e Séries:</strong> como em apps famosos (Netflix, Prime, Disney+, HBO Max etc).</li>
+          <li>✔️ <strong>Canais Infantis, Notícias, Música, Documentários</strong> e muito mais em um só lugar.</li>
+          <li>✔️ <strong>Compatível com todas as plataformas:</strong> Smart TVs, TV Box, Android, iPhone, Tablet, PC e navegador.</li>
+          <li>✔️ <strong>Teste grátis de até 6 horas</strong> para você experimentar sem compromisso.</li>
+          <li>🎬 Tudo em um só serviço com praticidade, estabilidade e qualidade.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Planos de Celular -->
+    <div class="bg-white rounded-lg shadow p-4">
+      <button class="w-full text-left faq-btn py-2" aria-expanded="false">
+        <div class="flex justify-between items-center">
+          <span class="font-semibold">2. Planos de Celular</span>
+          <span class="text-gray-500">Internet e ligações ilimitadas</span>
+        </div>
+      </button>
+      <div class="accordion-content px-2 text-sm text-gray-700">
+        Tenha um plano completo para o seu dia a dia, com internet de qualidade e benefícios exclusivos,
+        a partir de apenas <strong>R$ 50/mês</strong>.
+        <ul class="list-disc pl-4 mt-2 space-y-1">
+          <li>✔️ <strong>Ligações ilimitadas</strong> para qualquer operadora.</li>
+          <li>✔️ <strong>Apps ilimitados:</strong> WhatsApp, Instagram, Twitter (X) e TikTok sem descontar da franquia.</li>
+          <li>✔️ <strong>Chip físico ou eSIM</strong> – escolha a opção ideal para você.</li>
+          <li>✔️ Planos flexíveis e acessíveis para todos os perfis de uso.</li>
+        </ul>
+        📱 Conectividade completa e sem preocupações por um preço justo!
+      </div>
+    </div>
+
+    <!-- VPN -->
+    <div class="bg-white rounded-lg shadow p-4">
+      <button class="w-full text-left faq-btn py-2" aria-expanded="false">
+        <div class="flex justify-between items-center">
+          <span class="font-semibold">3. VPN</span>
+          <span class="text-gray-500">Internet ilimitada via aplicativo</span>
+        </div>
+      </button>
+      <div class="accordion-content px-2 text-sm text-gray-700">
+        Navegue sem limites usando nossa <strong>VPN exclusiva</strong>, com conexão rápida e estável
+        através de um aplicativo simples no Android.
+        <ul class="list-disc pl-4 mt-2 space-y-1">
+          <li>✔️ <strong>Internet ilimitada</strong> para uso no dia a dia.</li>
+          <li>✔️ <strong>Compatível com TIM e Vivo.</strong></li>
+          <li>✔️ <strong>Uso via aplicativo Android</strong> – instalação rápida e prática.</li>
+          <li>✔️ Conexão segura, estável e sem complicações.</li>
+        </ul>
+        🌐 Mais liberdade para você usar a internet como quiser!
+      </div>
+    </div>
+
+    <!-- Conteúdo Adulto -->
+<div class="bg-white rounded-lg shadow p-4">
+  <button class="w-full text-left faq-btn py-2" aria-expanded="false">
+    <div class="flex justify-between items-center">
+      <span class="font-semibold">4. Conteúdo Adulto</span>
+      <span class="text-gray-500">Plataforma exclusiva +18</span>
+    </div>
+  </button>
+  <div class="accordion-content px-2 text-sm text-gray-700">
+    Tenha acesso a um <strong>site exclusivo para maiores de 18 anos</strong>, funcionando de forma semelhante ao OnlyFans,
+    com conteúdo privado, seguro e disponível 24h para assinantes.
+  </div>
+</div>
+
+<!-- Streaming -->
+<div class="bg-white rounded-lg shadow p-4">
+  <button class="w-full text-left faq-btn py-2" aria-expanded="false">
+    <div class="flex justify-between items-center">
+      <span class="font-semibold">5. Streaming</span>
+      <span class="text-gray-500">Assine apps com desconto</span>
+    </div>
+  </button>
+  <div class="accordion-content px-2 text-sm text-gray-700">
+    Assine seus aplicativos de streaming favoritos com <strong>descontos exclusivos</strong>. 
+    Trabalhamos com os principais serviços oficiais, sempre no seu e-mail:
+    <ul class="list-disc pl-4 mt-2 space-y-1">
+      <li>✔️ YouTube Premium</li>
+      <li>✔️ Globoplay</li>
+      <li>✔️ Spotify</li>
+      <li>✔️ E vários outros apps sob demanda</li>
+    </ul>
+    🎶 Filmes, música e entretenimento do seu jeito, pagando menos!
+  </div>
+</div>
+
+
+
+    <!-- Contato -->
+    <section id="contato" class="mb-14">
+      <h2 class="text-2xl font-bold mb-4 text-center">Fale conosco</h2>
+
+      <div class="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
+        <form onsubmit="redirectWhatsApp(event)" class="bg-white p-6 rounded-lg shadow space-y-3">
+          <label class="block">
+            <span class="text-sm font-medium text-gray-700">Nome</span>
+            <input id="nome" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="Seu nome" />
+          </label>
+
+          <label class="block">
+            <span class="text-sm font-medium text-gray-700">Assunto / Plano</span>
+            <input id="assunto" required class="mt-1 block w-full border rounded px-3 py-2" placeholder="Ex: Quero assinar 2 telas" />
+          </label>
+
+          <label class="block">
+            <span class="text-sm font-medium text-gray-700">Mensagem</span>
+            <textarea id="mensagem" required class="mt-1 block w-full border rounded px-3 py-2" rows="4" placeholder="Escreva sua mensagem"></textarea>
+          </label>
+
+          <div class="flex gap-3">
+            <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md">📲 Enviar via WhatsApp</button>
+            <button type="button" onclick="sendEmail()" class="px-4 py-2 rounded border">✉️ Enviar por e-mail</button>
+          </div>
+
+          <p class="text-xs text-gray-400">Ao enviar, abriremos o WhatsApp com sua mensagem já preenchida. Número de contato: <strong class="text-gray-700">+55 71 99291-0002</strong></p>
+        </form>
+
+        <div class="bg-white p-6 rounded-lg shadow">
+          <h3 class="font-semibold mb-2">Atendimento</h3>
+          <p class="text-sm text-gray-700 mb-3">WhatsApp: <a href="https://wa.me/5571992910002" target="_blank" class="text-green-600 font-medium">+55 71 99291-0002</a></p>
+          <p class="text-sm text-gray-700 mb-3">E-mail: <a href="mailto:atendimentovisionix@gmail.com" class="text-indigo-600">atendimentovisionix@gmail.com</a></p>
+
+          <h4 class="font-medium mt-4 mb-2">Horário de atendimento</h4>
+          <p class="text-sm text-gray-700"></p>Seg a Sex: 08:00 — 22:00</p>
+          <p class="text-sm text-gray-700"></p>Sáb: 10:00 — 16:00</p>
+
+          <div class="mt-4">
+            <a href="#pagamento" class="inline-block px-4 py-2 rounded border">Fazer pagamento</a>
+            <a href="https://wa.me/5571992910002" target="_blank" class="inline-block ml-2 bg-green-500 text-white px-4 py-2 rounded">Abrir WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terms & privacy small section -->
+    <section class="mb-14 text-center">
+      <button onclick="openModal('terms')" class="text-xs text-gray-500 underline">Termos de Serviço</button>
+      <span class="px-2 text-gray-300">•</span>
+      <button onclick="openModal('privacy')" class="text-xs text-gray-500 underline">Política de Privacidade</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-8 text-sm text-gray-600">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      © 2025 Visionix IPTV — Conteúdo sujeito a disponibilidade e direitos de exibição. <br>
+      Desenvolvido por Visionix.
+    </div>
+  </footer>
+
+  <!-- Modal (Terms/Privacy) -->
+  <div id="modal" class="fixed inset-0 bg-black/40 hidden items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-lg shadow max-w-3xl w-full p-6 max-h-[90vh] overflow-auto">
+      <div class="flex justify-between items-start">
+        <h3 id="modal-title" class="text-lg font-semibold">Título</h3>
+        <button onclick="closeModal()" class="text-gray-500">Fechar ✕</button>
+      </div>
+      <div id="modal-body" class="mt-4 text-sm text-gray-700">
+        <!-- Conteúdo injetado via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    /*******************************
+     * CONFIGURE AQUI (edite)
+     *******************************/
+    const WA_NUMBER = "5571992910002"; // formato: código do país + DDD + número (ex.: 5511999999999)
+    const PIX_KEY = "atendimentovisionix@gmail.com";
+    const ACCOUNT_NAME = "Paulo César Ramos Luz";
+    /*******************************/
+
+    // Função para abrir WhatsApp com texto predefinido
+    function openWhatsAppPrefilled(message) {
+      const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    }
+
+    // Formulário -> abre WhatsApp com mensagem
+    function redirectWhatsApp(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value.trim();
+      const assunto = document.getElementById('assunto').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+      const text = `Olá, meu nome é ${nome}. Assunto: ${assunto}. Mensagem: ${mensagem}`;
+      openWhatsAppPrefilled(text);
+    }
+
+    // Copiar Pix
+    function copyPix() {
+      const pixInput = document.getElementById('pixKey');
+      pixInput.select();
+      pixInput.setSelectionRange(0, 99999);
+      navigator.clipboard?.writeText(pixInput.value).then(() => {
+        alert('Chave Pix copiada!');
+      }).catch(() => {
+        // fallback
+        document.execCommand('copy');
+        alert('Chave Pix copiada!');
+      });
+    }
+
+    // Gerar QR via API pública (substitua se desejar QR estático)
+    function showPixQR() {
+      const pixQRWrap = document.getElementById('pix-qr-wrap');
+      const pixQR = document.getElementById('pix-qr');
+      const payload = PIX_KEY;
+      const src = 'https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=' + encodeURIComponent(payload);
+      pixQR.src = src;
+      pixQRWrap.classList.remove('hidden');
+    }
+
+    // Enviar por e-mail (mailto)
+    function sendEmail() {
+      const nome = document.getElementById('nome').value || '';
+      const assunto = document.getElementById('assunto').value || 'Contato via site';
+      const mensagem = document.getElementById('mensagem').value || '';
+      const body = `Nome: ${nome}%0A%0A${mensagem}`;
+      window.location.href = `mailto:atendimento@visionix.com.br?subject=${encodeURIComponent(assunto)}&body=${body}`;
+    }
+
+    // FAQ acordeão
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.nextElementSibling;
+        const isOpen = content.classList.contains('accordion-open');
+        // fechar todos
+        document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('accordion-open'));
+        document.querySelectorAll('.faq-btn').forEach(b => b.setAttribute('aria-expanded', 'false'));
+        if (!isOpen) {
+          content.classList.add('accordion-open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Modal de termos e privacidade
+    function openModal(type) {
+      const modal = document.getElementById('modal');
+      const title = document.getElementById('modal-title');
+      const body = document.getElementById('modal-body');
+      if (type === 'terms') {
+        title.textContent = 'Termos de Serviço';
+        body.innerHTML = `<p><strong>Termos</strong></p>
+          <p>Ao contratar os serviços Visionix IPTV, você concorda com nossos termos de uso. Não nos responsabilizamos por uso indevido ou violação de direitos autorais. Para dúvidas sobre canais e direitos de exibição, contate suporte.</p>
+          <p class="mt-3 text-xs text-gray-400">Texto de exemplo — substitua pelo seu termo legal completo.</p>`;
+      } else {
+        title.textContent = 'Política de Privacidade';
+        body.innerHTML = `<p><strong>Privacidade</strong></p>
+          <p>Respeitamos sua privacidade. Coletamos apenas dados necessários para prestação do serviço (contato, pagamentos). Não compartilhamos seus dados sem autorização.</p>
+          <p class="mt-3 text-xs text-gray-400">Texto de exemplo — substitua pela sua política de privacidade completa.</p>`;
+      }
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+    function closeModal() {
+      const modal = document.getElementById('modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // Small: preencher campos visíveis do Pix a partir das constantes
+    document.addEventListener('DOMContentLoaded', () => {
+      const pixInput = document.getElementById('pixKey');
+      const pixOwner = document.getElementById('pix-owner');
+      if (pixInput) pixInput.value = PIX_KEY;
+      if (pixOwner) pixOwner.textContent = ACCOUNT_NAME;
+
+      // Atualiza links de WhatsApp do header e contato
+      const btnWa = document.getElementById('btn-whatsapp');
+      if (btnWa) btnWa.href = `https://wa.me/${WA_NUMBER}`;
+      // CTA Assinar (abre planos) já aponta para #planos
+    });
+  </script>
+</body>
+</html>
